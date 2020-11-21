@@ -26,3 +26,4 @@ after_success:
   - docker push nitinallp/udagram-feed-api
   - docker push nitinallp/udagram-user-api
   - docker push nitinallp/udagram-frontend
+  - docker push nitinallp/reverse-proxy
