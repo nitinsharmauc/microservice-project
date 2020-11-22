@@ -34,6 +34,8 @@ router.get('/', async (req: Request, res: Response) => {
       item.url = AWS.getGetSignedUrl(item.url);
     }
   });
+  console.log("Inside /api/v0/feed\n");
+  console.log("Returning feed items\n");
   res.send(items);
 });
 
@@ -42,6 +44,8 @@ router.get('/:id',
     async (req: Request, res: Response) => {
       const {id} = req.params;
       const item = await FeedItem.findByPk(id);
+      console.log("Inside /api/v0/feed/:id\n");
+      console.log("Returning feed item" + id + "\n");
       res.send(item);
     });
 
